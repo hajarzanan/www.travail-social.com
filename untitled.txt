@@ -1,0 +1,229 @@
+Html<!DOCTYPE html><html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماستر التميز في العمل الاجتماعي - USMS</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background: linear-gradient(to right, #f9f9f9, #e6e6e6);
+        }
+        header {
+            background: linear-gradient(to left, #004080, #0099cc);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff6600;
+        }
+        header img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #004080;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff6600;
+            color: white;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 900px;
+        }
+        h2 {
+            color: #004080;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 5px solid #ff6600;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            padding: 10px;
+            border: 2px solid #004080;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ff6600;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e0ffe0;
+            border: 2px solid #00cc00;
+            border-radius: 10px;
+            text-align: right;
+            color: #006600;
+            font-size: 18px;
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #004080;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #004080;
+            color:bleu;
+        }
+        @media (max-width: 600px) {
+            nav a {
+                margin: 5px;
+            }
+            header img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body><header>
+    <img src="logo.png" alt="شعار العمل الاجتماعي">
+    <h1>ماستر التميز في العمل الاجتماعي</h1>
+    <p>جامعة السلطان مولاي سليمان - كلية الآداب والعلوم الإنسانية، بني ملال</p>
+</header>
+
+<nav>
+    <a href="#login">تسجيل الدخول</a>
+    <a href="#contact">اتصل بنا</a>
+</nav>
+
+<section id="login">
+    <h2>تسجيل الدخول</h2>
+    <form onsubmit="showProfile(event)">
+        <input type="text" id="regNumber" placeholder="رقم التسجيل" required>
+        <input type="text" id="cin" placeholder="رقم البطاقة الوطنية" required>
+        <input type="date" id="birthDate" placeholder="تاريخ الازدياد" required>
+        <button type="submit">دخول</button>
+    </form>
+    <div class="result" id="profileBox">
+        <h3>الملف الشخصي</h3>
+        <p><strong>الاسم الكامل:</strong> هاجر زنان</p>
+        <p><strong>التخصص:</strong> العمل الاجتماعي</p>
+        <p><strong>رقم التسجيل:</strong> <span id="showReg"></span></p>
+       </h3>النتائج :</h3>
+        <table>
+            <tr>
+                <th>الوحدة</th>
+                <th>Module</th>
+                <th>النتيجة</th>
+            </tr>
+            <tr>
+                <td>السياسات و الفعل الاجتماعي</td>
+                <td>Politiques et Action Sociale</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>التدخل الاجتماعي في العمل الاجتماعي</td>
+                <td>Intervention Sociale en Travail Social</td>
+                <td>13.50</td>
+            </tr>
+            <tr>
+                <td>مناهج البحث</td>
+                <td>Méthodologie de la Recherche</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>القضايا الاجتماعية</td>
+                <td>Questions Sociales</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>المهارات الحياتية</td>
+                <td>Compétences de Vie</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>اللغة الفرنسية</td>
+                <td>Langue Française</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>اللغة الإنجليزية</td>
+                <td>Langue Anglaise</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>المنظمات و المشاريع في العمل الاجتماعي</td>
+                <td>Organisations et Projets en Travail Social</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <th colspan="2">مجموع النقط</th>
+                <th>13.14</th>
+            </tr>
+        </table>
+        <p><strong>الوضعية:</strong> ناجح</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>اتصل بنا</h2>
+    <p><strong>العنوان:</strong> كلية الآداب والعلوم الإنسانية، بني ملال، المغرب.</p>
+    <p><strong>الهاتف:</strong> 0523487654</p>
+    <p><strong>البريد الإلكتروني:</strong> flshbm@usms.ma</p>
+</section>
+
+<footer>
+    &copy; 2025 ماستر التميز في العمل الاجتماعي - جامعة السلطان مولاي سليمان.
+</footer>
+
+<script>
+    function showProfile(event) {
+        event.preventDefault();
+        let regNumber = document.getElementById('regNumber').value;
+        document.getElementById('showReg').innerText = regNumber;
+        document.getElementById('profileBox').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
